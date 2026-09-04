@@ -4,26 +4,26 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public GameObject gameOverPanel;
-    public GameObject tapToStart;
+    // public GameObject tapToStart;
     public GameObject scoreText;
     
     private void Start()
     {
         gameOverPanel.SetActive(false);
-        tapToStart.SetActive(true);
-        scoreText.SetActive(false);
+        // tapToStart.SetActive(true);
+        scoreText.SetActive(true);
         PauseGame();
     }
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            StartGame();
-        }
-    }
+    // private void Update()
+    // {
+    //     if(Input.GetKeyDown(KeyCode.Mouse0))
+    //     {
+    //         StartGame();
+    //     }
+    // }
     public void GameOver()
     {
-        scoreText.SetActive(false);
+        // scoreText.SetActive(false);
         gameOverPanel.SetActive(true);
     }
     public void Restart()
@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
     public void StartGame()
     {
         scoreText.SetActive(true);
-        tapToStart.SetActive(false);
+        // tapToStart.SetActive(false);
         Time.timeScale=1f;
     }
 }
