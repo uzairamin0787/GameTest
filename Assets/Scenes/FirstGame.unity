@@ -147968,6 +147968,7 @@ GameObject:
   - component: {fileID: 1583331933}
   - component: {fileID: 1583331935}
   - component: {fileID: 1583331934}
+  - component: {fileID: 1583331936}
   m_Layer: 5
   m_Name: LevelsPanel
   m_TagString: Untagged
@@ -147995,7 +147996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 902}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1583331934
@@ -148036,6 +148037,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583331932}
   m_CullTransparentMesh: 1
+--- !u!95 &1583331936
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583331932}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: daf98e7d2670ed543ae706b6fd20057f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1583339355 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7254534909217565152, guid: 56f846206aba928468deb4d0cc219b7e, type: 3}
