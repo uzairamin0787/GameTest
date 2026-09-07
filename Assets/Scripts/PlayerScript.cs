@@ -39,13 +39,13 @@
 //         {
 //             transform.position = transform.position - new Vector3(speed * Time.deltaTime, 0, 0);
 //         }
-        
+
 //     }
 //     private void FixedUpdate()
 //     {
 //         rigidbody.AddForce(0, 0, force * Time.deltaTime);
 //     }
-    
+
 // }
 
 
@@ -67,6 +67,8 @@ public class PlayerScript : MonoBehaviour
     public float speed = 10f;
     public float maxX;
     public float minX;
+    public float jumpForce = 7f;
+    private bool isGrounded = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -116,10 +118,26 @@ public class PlayerScript : MonoBehaviour
     {
         transform.position = transform.position - new Vector3(speed * Time.deltaTime, 0, 0);
     }
+    // Jump Button Function
+    public void Jump()
+    {
+        if (isGrounded)
+        {
+            rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
+        }
+    }
 
     private void FixedUpdate()
     {
         rigidbody.AddForce(0, 0, force * Time.deltaTime);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
     }
 }
 

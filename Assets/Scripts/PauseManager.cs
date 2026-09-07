@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
     public GameObject menu;
+    public GameObject mainMenuPanel;
 
     public void PauseGame()
     {
@@ -14,5 +16,12 @@ public class PauseManager : MonoBehaviour
     {
         menu.SetActive(false);
         Time.timeScale = 1f;
+    }
+    public void QuitGame()
+    {
+        menu.SetActive(false);
+        SceneManager.LoadScene("FirstGame");
+        // mainMenuPanel.SetActive(true);
+        // Time.timeScale = 0f;
     }
 }

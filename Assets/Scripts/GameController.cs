@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
     public GameObject gameOverPanel;
     // public GameObject tapToStart;
     public GameObject scoreText;
+    public GameObject mainMenuPanel;
     
     private void Start()
     {
@@ -28,11 +29,14 @@ public class GameController : MonoBehaviour
     }
     public void Restart()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("FirstGame");
     }
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("FirstGame");
+        // mainMenuPanel.SetActive(true);
+        // gameOverPanel.SetActive(false);
     }
     public void PauseGame()
     {
