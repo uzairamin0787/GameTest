@@ -25,6 +25,12 @@ public class Week2PlayerController : MonoBehaviour
             rb.position + movement * moveSpeed * Time.deltaTime
         );
 
+        // Spin while moving forward
+        if (vertical > 0)
+        {
+            rb.AddTorque(Vector3.right * 2f);
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Space pressed. Grounded = " + groundCheck.IsGrounded());
